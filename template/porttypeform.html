@@ -1,0 +1,16 @@
+<form class="form-horizontal alert alert-warning" name="List" id="Form" ng-submit="insertInfo(port);" hidden>
+<h3 class="text-center">Insert Product Category</h3>
+	<div class="form-group">
+		<p class="text-danger" ng-show="List.name.$invalid && List.name.$dirty">Name field is Empty!</p>
+	</div>
+	<div class="form-group">
+		<label for="Type">Port Type:</label>
+		<input type="text" name="type" class="form-control" placeholder="Enter Port Type" ng-model="port.type" value="" autofocus required />
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="List.port_type.$invalid && List.port_type.$dirty">Product ID is ty</p>
+	</div>
+	<div class="form-group">
+		<button class="btn btn-warning" ng-disabled="List.$invalid">Add Into Database</button>
+	</div>
+</form>

@@ -1,0 +1,10 @@
+<form class="form-horizontal alert alert-warning" id="editForm" ng-submit="UpdateInfo(currentData)" hidden>
+<h3 class="text-center">Update Category Details</h3>
+	<div class="form-group">
+		<label for="Name">Category Name:</label>
+		<input type="text" class="form-control" ng-model="currentData.name" value="{{currentData.name}}">
+	</div>
+	<div class="form-group">
+		<button class="btn btn-warning" ng-disabled="List.$invalid" ng-click="updateMsg(currentData.id)">Update</button>
+	</div>
+</form>

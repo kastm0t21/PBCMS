@@ -1,0 +1,91 @@
+<form class="form-horizontal alert alert-warning" name="List" id="Form" ng-submit="insertInfo(product)" hidden>
+	<h3 class="text-center">Insert Product Category</h3>
+	<div class="form-group">
+		<label for="ASIN">Product ASIN:</label>
+		<input type="text" name="ASIN" class="form-control" ng-model="product.ASIN" />
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="List.ASIN.$invalid && List.ASIN.$dirty">ASIN field is Empty!</p>
+	</div>
+	<div class="form-group">
+		<label for="Name">Product Name:</label>
+		<input type="text" name="name" class="form-control" placeholder="Enter Product Name" ng-model="product.name" value=""
+		 autofocus required />
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="List.name.$invalid && List.name.$dirty">Name field is Empty!</p>
+	</div>
+	<div class="form-group">
+		<label for="URL">Product URL:</label>
+		<input type="text" name="url" class="form-control" ng-model="product.url" />
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="List.url.$invalid && List.url.$dirty">URL field is Empty!</p>
+	</div>
+	<div class="form-group">
+		<label for="Quantity">Product Quantity:</label>
+		<input type="text" name="quantity" class="form-control" ng-model="product.quantity" />
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="List.quantity.$invalid && List.quantity.$dirty">Quantity field is Empty!</p>
+	</div>
+	<div class="form-group">
+		<label for="Color">Product Color:</label>
+		<input type="text" name="color" class="form-control" ng-model="product.color" />
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="List.color.$invalid && List.color.$dirty">Color field is Empty!</p>
+	</div>
+	<div class="form-group">
+		<label for="Size">Product Size:</label>
+		<input type="text" name="size" class="form-control" ng-model="product.size" />
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="List.size.$invalid && List.size.$dirty">Size field is Empty!</p>
+	</div>
+	<div class="form-group">
+		<label for="Price">Product Price:</label>
+		<input type="text" name="price" class="form-control" ng-model="product.price" />
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="List.price.$invalid && List.price.$dirty">Price field is Empty!</p>
+	</div>
+	<!--<div class="form-group">
+		<label for="Image">Product Image:</label>-->
+	<!--<input type="text" ng-model="product.image" class="form-control" />-->
+	<!--<input type="file" name="image" class="form-control" ng-model="product.image" accept="image/*"/>
+	</div>-->
+	<div class="form-group">
+		<label for="Type">Type:</label><br />
+		<select name="type" class="form-control" ng-model="product.type" required>
+			<option value="" disabled selected hidden>Select the Type</option>
+			<option ng-repeat="t in type" value="{{t.type}}">{{t.type}}</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="List.type.$invalid && List.type.$dirty">Please Select a Type</p>
+	</div>
+	<div class="form-group">
+		<label for="Category">Category:</label><br />
+		<select name="category" class="form-control" ng-model="product.category" required>
+			<option value="" disabled selected hidden>Select the Category</option>
+			<option ng-repeat="c in category" value="{{c.category}}">{{c.category}}</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="List.category.$invalid && List.category.$dirty">Please Select a Category</p>
+	</div>
+	<div class="form-group">
+		<label for="Collection">Collection:</label><br />
+		<select name="collection" class="form-control" ng-model="product.collection" required>
+			<option value="" disabled selected hidden>Select the Collection</option>
+			<option ng-repeat="co in collection" value="{{co.collection}}">{{co.collection}}</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<p class="text-danger" ng-show="List.collection.$invalid && List.collection.$dirty">Please Select a Category</p>
+	</div>
+	<div class="form-group">
+		<button class="btn btn-warning" ng-disabled="List.$invalid">Add Into Database</button>
+	</div>
+</form>

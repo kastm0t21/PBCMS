@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+
+<html>
+<title>Party Bargains CMS</title>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>-->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="controllers/controller.js"></script>
+    <script src="controllers/productcon.js"></script>
+    <script src="controllers/categorycon.js"></script>
+    <script src="controllers/portslotcon.js"></script>
+    <script src="controllers/porttypecon.js"></script>
+    <script src="controllers/imagecon.js"></script>
+
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body ng-app="app">
+    <header ng-include="'template/header.html'"></header>
+    <div ui-view>
+
+    </div>
+</body>
+
+</html>

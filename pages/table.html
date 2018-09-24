@@ -1,0 +1,32 @@
+		<div align="center" class="col-xs-12 col-xs-offset-2 col-sm-8 col-md-8 col-lg-8 col-md-offset-2 animated fadeInUp">
+			<div ng-include src="template/editForm.html"></div>
+			<div class="table-responsive">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Company Name</th>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="employee in employees" class="animated">
+							<td>
+							<span>{{employee.id}}</span></td>
+							<td>{{employee.name}}</td>
+							<td>{{employee.email}}</td>
+							<td>{{employee.companyName}}</td>
+							<td>
+								<button class="btn btn-warning" ng-click="editInfo(employee)" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
+							</td>
+							<td>
+								<button class="btn btn-danger" ng-click="deleteUser(employee)" title="Delete"><span class="glyphicon glyphicon-trash"></span></button>
+							</td>
+                    	</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
